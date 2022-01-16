@@ -29,7 +29,8 @@
       }
     }
 
-    g.setFont('Vector', 28);
+//    g.setFont('Vector', 28);
+    g.setFont6x15(2);
     g.setFontAlign(0,0);
 
     let innerRadius = (withDots ? outerRadius * 0.9 : outerRadius) - 10;
@@ -45,7 +46,9 @@
       let Color = E.HSBtoRGB(i/12,Saturation,Brightness, true);
       g.setColor(Color[0]/255,Color[1]/255,Color[2]/255);
 
-      g.drawString(i == 0 ? '12' : '' + i, x,y);
+      g.drawString(i == 0 ? '12' : '' + i, x-2,y+2);
+      g.drawString(i == 0 ? '12' : '' + i, x-1,y+2);
+      g.drawString(i == 0 ? '12' : '' + i,   x,y+2);
     }
   };
 })();
